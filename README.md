@@ -1,6 +1,7 @@
 # slack-thug
 
 [![Build Status](https://travis-ci.org/jerry-git/slack-thug.svg?branch=master)](https://travis-ci.org/jerry-git/slack-thug)
+[![codecov](https://codecov.io/gh/jerry-git/slack-thug/branch/master/graph/badge.svg)](https://codecov.io/gh/jerry-git/slack-thug)
 [![license](https://img.shields.io/github/license/jerry-git/slack-thug.svg)](https://github.com/jerry-git/slack-thug/blob/master/LICENSE)
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
