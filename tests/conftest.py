@@ -19,6 +19,7 @@ def test_db(monkeypatch):
 
 @pytest.fixture
 def slack_client(monkeypatch):
+    monkeypatch.setenv("SLACK_TOKEN", "foo")
     c = MagicMock()
     monkeypatch.setattr("slack_thug.slack.SlackClient", c)
     return c()
