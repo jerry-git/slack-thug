@@ -26,5 +26,6 @@ script: poetry run pytest --cov slack_thug --cov-report term-missing
 after_success:
 - |
   if [[ "$RUN_CODECOV" == 1 ]]; then
+    pip install codecov
     codecov
   fi
