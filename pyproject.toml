@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "slack_thug"
+version = "0.1.1"
+description = "Thug memes from slack uploads"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+requests = "^2.21"
+flask = "^1.0"
+redis = "^3.0"
+rq = "^0.13.0"
+slackclient = "^1.3"
+thug-memes = "^0.1.2"
+dlib = "^19.16"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^1.12"
+pytest = "^4.0"
+pytest-cov = "^2.6"
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

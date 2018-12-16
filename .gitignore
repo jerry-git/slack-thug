@@ -1,0 +1,26 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Coverage
+.coverage*
+coverage.xml
+
+#tox
+.tox/*
+
+#pytest
+.pytest_cache/*
+
+# Misc
+.idea/*
+dist/*
+src/slack_thug.egg-info/*
+.cache/*
+*.DS_Store
+.eggs/*
+tmp/*
+.python-version
+*.db
+.env

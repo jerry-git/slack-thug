@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    image: web
+    container_name: web
+    ports:
+     - "5000:5000"
+    command: gunicorn --bind 0.0.0.0:5000 --workers 2 slack_thug.app:app
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      # ADD YOUR SLACK TOKEN HERE
+      # or before docker-compose up: EXPORT SLACK_TOKEN=<your token>
+      - SLACK_TOKEN=${SLACK_TOKEN}
+    depends_on:
+      - redis
+      - worker
+
+  worker:
+    image: web
+    command: python -m slack_thug.worker
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      # ADD YOUR SLACK TOKEN HERE
+      # or before docker-compose up: EXPORT SLACK_TOKEN=<your token>
+      - SLACK_TOKEN=${SLACK_TOKEN}
+    depends_on:
+      - redis
+
+  redis:
+    image: "redis:alpine"
