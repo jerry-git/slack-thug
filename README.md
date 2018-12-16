@@ -30,6 +30,7 @@ If there's an issue while creating the thug meme, the bot will reply nicely in t
 * [SQLite db](https://docs.python.org/3/library/sqlite3.html)
 * [Docker Compose](https://docs.docker.com/compose/)
 * [slackclient](https://slackapi.github.io/python-slackclient/)
+* [Poetry](https://poetry.eustace.io/)
 
 ## Setup
 ### Slack
