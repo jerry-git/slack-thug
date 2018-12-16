@@ -11,7 +11,7 @@ install:
 jobs:
   include:
     - python: 3.6
-      env: env: RUN_CODECOV=1
+      env: RUN_CODECOV=1
 
     - stage: linting
       python: 3.6
