@@ -4,8 +4,6 @@ import sqlite3
 
 ImgDetails = namedtuple("ImgDetails", ["url", "channel"])
 
-IMG_DETAILS_TABLE = "img_details"
-
 
 def _db_uri():
     return os.environ.get("THUG_SQLITE_URI", "thug_base.db")
@@ -18,9 +16,7 @@ def init_db():
 def _maybe_create_img_details_table():
     conn = sqlite3.connect(_db_uri())
     c = conn.cursor()
-    sql = "CREATE TABLE IF NOT EXISTS {} (ts text, url text, channel text)".format(
-        IMG_DETAILS_TABLE
-    )
+    sql = "CREATE TABLE IF NOT EXISTS img_details (ts text, url text, channel text)"
     c.execute(sql)
     conn.commit()
     c.close()
