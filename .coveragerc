@@ -1,0 +1,11 @@
+[paths]
+source = src/slack_thug
+
+[run]
+branch = True
+source = slack_thug
+parallel = true
+
+[report]
+show_missing = true
+precision = 2
