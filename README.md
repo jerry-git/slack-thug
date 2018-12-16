@@ -61,7 +61,7 @@ If there's an issue while creating the thug meme, the bot will reply nicely in t
 
 ### slack-thug
 
-** NOTE: make sure you have `SLACK_TOKEN` env variable configured at this point.
+**NOTE: make sure `SLACK_TOKEN` env variable is configured at this point.**
 
 #### Option 1 - docker-compose (the easy way):
 1. Install Docker Engine and Docker Compose if you don't have those.
