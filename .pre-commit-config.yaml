@@ -18,8 +18,6 @@
     -   id: debug-statements
         language: python
         language_version: python3
-    -   id: name-tests-test
-        args: ['--django']
 -   repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
     sha: v1.0.3
     hooks:
