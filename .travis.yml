@@ -1,0 +1,30 @@
+language: python
+
+stages:
+  - linting
+  - test
+
+install:
+  - pip install poetry
+  - poetry install
+
+jobs:
+  include:
+    - python: 3.6
+      env: env: RUN_CODECOV=1
+
+    - stage: linting
+      python: 3.6
+      install:
+        - pip install pre-commit
+      script:
+        - pre-commit run --a
+
+
+script: poetry run pytest --cov slack_thug --cov-report term-missing
+
+after_success:
+- |
+  if [[ "$RUN_CODECOV" == 1 ]]; then
+    codecov
+  fi
