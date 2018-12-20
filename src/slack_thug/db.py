@@ -37,4 +37,4 @@ def get_img_details(ts):
             row = c.fetchone()
             if row:
                 return ImgDetails(row[1], row[2])
-        return None
+            return None
